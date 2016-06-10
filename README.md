@@ -1,2 +1,0 @@
-# konsumo-geo
-Konsumo geo
