@@ -15,6 +15,10 @@
       "type": "string",
       "required": true
     },
+    "close_hour": {
+      "type": "string",
+      "required": true
+    },
     "id": {
       "type": "number",
       "required": true
