@@ -5,7 +5,6 @@
     "port": 27017,
     "database": "konsumo",
     "password": "r3st0*1",
-    "name": "konsumo",
     "user": "konsumo",
     "connector": "mongodb"
   }

@@ -15,7 +15,7 @@
       "type": "string",
       "required": true
     },
-    "id_konsumo": {
+    "id": {
       "type": "number",
       "required": true
     },
@@ -36,13 +36,13 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
+      "principalId": "$everyone",
       "permission": "ALLOW"
     },
     {
       "accessType": "WRITE",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
+      "principalId": "$everyone",
       "permission": "ALLOW"
     }
     ],
