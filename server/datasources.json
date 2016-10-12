@@ -1,10 +1,10 @@
 {
   "db": {
-    "name": "db",
     "host": "127.0.0.1",
     "port": 27017,
     "database": "konsumo",
     "password": "r3st0*1",
+    "name": "db",
     "user": "konsumo",
     "connector": "mongodb"
   }

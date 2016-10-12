@@ -1,0 +1,34 @@
+require('rootpath')();
+
+var dataSource = server.dataSources.db;
+
+
+getModels() {
+    var app_models = require('server/model-config.json');
+    app_models = Object.keys(app_models);
+    app_models = remove(app_models, (model)=> {
+      return indexOf(this.exclude, model);
+    });
+    return app_models;
+}
+
+var models = getModels();
+
+dataSource.isActual(models, (error, is_actual)=> {
+        if (error) throw error;
+        if (!is_actual) {
+          dataSource
+            .autoupdate(models)
+            .then((models)=> {
+              scope.emit('success', config.migration.message.success);
+              resolve(true);
+            })
+            .catch((error)=> {
+              scope.emit('error', error);
+              reject(error);
+            });
+        } else {
+          scope.emit('error', false);
+          reject(false);
+        }
+});
