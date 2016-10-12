@@ -1,6 +1,6 @@
 # Base image is node.js
 FROM node:5.11.0
-# Author: Daniel Ortega
+# Author: Gloria Palma
 MAINTAINER Gloria Palma <ing.gloriapalmagonzalez@gmail.com>
 RUN mkdir -p /home/gatero/app &&\
 groupadd -r konsumoGeo &&\
