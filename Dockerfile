@@ -11,5 +11,5 @@ EXPOSE 3000
 USER konsumoGeo
 
 # docker build -t konsumo-api:1 .
-# docker run -it --rm -v $PWD:/home/konsumoGeo/app -p 3000:3000 node:5.11.0 bash
-# docker run -d --name konsumo-geo-api -v $PWD:/home/konsumoGeo/app -p 3000:3000 konsumo-geo-api:1 node .
+# docker run -it --rm -v $PWD:/home/konsumoGeo/app -p 3000:3000 -p  --net=host node:5.11.0 bash
+# docker run -d --name konsumo-geo-api -v $PWD:/home/konsumoGeo/app -p 3000:3000 --net=host konsumo-api:1 node .
